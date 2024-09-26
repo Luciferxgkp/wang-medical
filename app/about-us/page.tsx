@@ -1,4 +1,4 @@
-import { ArrowDown, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -38,9 +38,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="w-full text-primary flex flex-col gap-10 px-10">
-          <h2 className="text-2xl tracking-tight">
-            Welcome to Wang Medical
-          </h2>
+          <h2 className="text-2xl tracking-tight">Welcome to Wang Medical</h2>
           <div className="tracking-tight font-light text-lg flex flex-col gap-4">
             <p>
               Our providers want to ensure they can help you and establish
