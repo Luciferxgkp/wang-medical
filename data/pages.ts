@@ -6,8 +6,8 @@ export const pages = [
   },
   {
     id: "2",
-    title: "About",
-    path: "/about",
+    title: "About Us",
+    path: "/about-us",
   },
   {
     id: "3",
