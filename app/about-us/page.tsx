@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -82,6 +83,52 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="my-5 md:my-20 w-full flex h-10"></div>
+      <div className="pt-5 md:pt-20 w-full flex flex-col h-max px-4 md:px-16 bg-white">
+        <h2 className="text-[16px] font-thin text-primary uppercase">
+          We know how to
+        </h2>
+        <p
+          className="text-[30px]
+            sm:text-[48px]
+            md:text-[60px]
+            lg:text-[72px]
+            text-primary
+            tracking-tighter
+            font-light
+            leading-[30px]
+            sm:leading-[48px]
+            md:leading-[60px]
+            lg:leading-[72px]
+            mt-5
+            w-full
+            md:max-w-2xl
+          "
+        >
+          Leading the way to overall health
+        </p>
+        <p
+          className="text-[14px]
+            sm:text-[16px]
+            md:text-[18px]
+            mt-4
+            w-full
+            md:max-w-2xl
+          "
+        >
+          Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia.
+        </p>
+        <div className="flex items-center my-20 gap-5">
+          <Avatar className="h-20 w-20">
+            <AvatarImage src="image.txt" alt="image" />
+            <AvatarFallback>WM</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col gap-1">
+            <p className="text-2xl font-light text-primary">Wang Medical</p>
+            <p className="text-sm">CEO & Founder</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
