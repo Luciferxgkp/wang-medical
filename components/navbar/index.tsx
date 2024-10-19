@@ -69,22 +69,21 @@ const Navbar = () => {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-
-        <div className="hidden md:flex items-center gap-4">
-          {pages.map((page) => (
-            <Link
-              key={page.id}
-              href={page.path}
-              className={cn(
-                "text-base hover:text-[--theme-color-text_dark]",
-                page.path === path &&
-                  "text-[--theme-color-text_dark] font-semibold"
-              )}
-            >
-              {page.title}
-            </Link>
-          ))}
-        </div>
+      </div>
+      <div className="hidden md:flex items-center gap-4">
+        {pages.map((page) => (
+          <Link
+            key={page.id}
+            href={page.path}
+            className={cn(
+              "text-base hover:text-[--theme-color-text_dark]",
+              page.path === path &&
+                "text-[--theme-color-text_dark] font-semibold"
+            )}
+          >
+            {page.title}
+          </Link>
+        ))}
       </div>
     </div>
   );
