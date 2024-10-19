@@ -1,22 +1,26 @@
-import { ChevronDown } from "lucide-react";
+import Header from "@/components/header";
+import { Metadata } from "next";
 import Image from "next/image";
-import React from "react";
+
+export const metadata: Metadata = {
+  title: "About Us - Wang Medical",
+  description: "About Us - Wang Medical",
+};
 
 const AboutUs = () => {
   return (
     <div className="w-full">
-      <div className="mt-5 md:mt-20">
-        <h2 className="text-primary text-3xl lg:text-6xl tracking-tight text-center font-light">
-          About Us
-        </h2>
-        <ChevronDown
-          className="mx-auto md:mt-5 text-primary w-5 h-5 md:w-6 md:h-6"
-          size={25}
-        />
-      </div>
+      <Header header="About Us" />
       <div className="my-5 md:mt-[10rem] w-full flex flex-col md:flex-row items-center">
         <div className="w-full h-[500px] relative">
-          <div className="w-[220px] h-[280px] lg:w-[400px] lg:h-[500px] absolute left-5 lg:left-[100px] ">
+          <div
+            className="w-[220px] h-[280px]
+            sm:w-[300px] sm:h-[400px]
+            md:w-[260px] md:h-[320px] 
+          lg:w-[280px] lg:h-[360px]
+          xl:w-[400px] xl:h-[500px]
+          absolute left-5 lg:left-[100px] "
+          >
             <Image
               src={"/istockphoto-1453141064-612x612.jpg"}
               alt="Acupuncture"
@@ -26,7 +30,20 @@ const AboutUs = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-[220px] h-[220px] lg:w-[400px] lg:h-[400px] absolute left-28 lg:left-[300px] top-[200px]">
+          <div
+            className="w-[220px] h-[220px]
+          
+          sm:w-[300px] sm:h-[300px]
+          md:w-[260px] md:h-[260px]
+          lg:w-[300px] lg:h-[300px]
+          xl:w-[400px] xl:h-[400px] 
+          absolute 
+          left-28 
+          sm:left-60
+          md:left-[100px]
+          lg:left-[200px]
+          xl:left-[300px] top-[200px]"
+          >
             <Image
               src={"/360_F_213691742_bUiIM9XYfy1krArVdBR6j4UbSdKNTpEv.jpg"}
               alt="Acupuncture"

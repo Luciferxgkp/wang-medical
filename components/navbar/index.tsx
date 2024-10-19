@@ -1,17 +1,4 @@
 "use client";
-import { pages } from "@/data/pages";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
-import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import {
   Command,
   CommandEmpty,
@@ -20,6 +7,18 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { pages } from "@/data/pages";
+import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const path = usePathname();
@@ -27,9 +26,12 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between px-4 md:px-16 h-20">
       <div>
-        <h2 className="text-xl md:text-2xl lg:text-3xl text-[--theme-color-text_dark] tracking-tighter">
+        <Link
+          href="/"
+          className="text-xl md:text-2xl lg:text-3xl text-[--theme-color-text_dark] tracking-tighter"
+        >
           Wang Medical
-        </h2>
+        </Link>
       </div>
       <div>
         <Sheet>
@@ -43,9 +45,12 @@ const Navbar = () => {
             <SheetHeader>
               <SheetTitle>
                 <div className="text-start">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl text-[--theme-color-text_dark] tracking-tighter">
+                  <Link
+                    href="/"
+                    className="text-xl md:text-2xl lg:text-3xl text-[--theme-color-text_dark] tracking-tighter"
+                  >
                     Wang Medical
-                  </h2>
+                  </Link>
                 </div>
               </SheetTitle>
               <Command>
