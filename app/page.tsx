@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import img1 from "@/public/hero-1.jpeg";
+import img1 from "@/public/iStock-147320515.jpg";
 import img2 from "@/public/image-2.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +7,13 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="w-full min-h-screen">
-      <Image src={img1} alt="hero" width={1920} height={1080} />
+      <Image
+        src={img1}
+        alt="hero"
+        width={1920}
+        height={1080}
+        className="object-cover h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[90vh] w-full"
+      />
       <div className="px-4 md:px-16 my-10 md:my-20 flex flex-col items-center justify-center text-center">
         <h2 className="text-[16px] font-thin text-primary uppercase">
           What we do
