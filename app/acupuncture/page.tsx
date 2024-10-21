@@ -1,4 +1,10 @@
 import Header from "@/components/header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Acupuncture - Wang Medical",
+  description: "Acupuncture - Wang Medical",
+};
 
 const Acupuncture = () => {
   return (
