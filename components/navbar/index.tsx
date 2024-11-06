@@ -81,7 +81,7 @@ export default function Navbar() {
                       <Link href="/modern-research">Modern Research</Link>
                     </CommandItem>
                     <CommandItem asChild>
-                      <Link href="/faq">FAQs</Link>
+                      <Link href="/faqs">FAQs</Link>
                     </CommandItem>
                   </CommandGroup>
                 </CommandList>
@@ -133,7 +133,7 @@ export default function Navbar() {
                   nervous system, endocrine and immune systems, cardiovascular
                   system, and digestive system.`}
                 </ListItem>
-                <ListItem href="/faq" title="FAQs">
+                <ListItem href="/faqs" title="FAQs">
                   {`What is Acupuncture? How does Acupuncture work? What is
                   Acupuncture used for?`}
                 </ListItem>
