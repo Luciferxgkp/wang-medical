@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Metadata } from "next";
@@ -64,10 +65,10 @@ const AboutUs = () => {
     <div className="w-full">
       <Header header="About Us" />
       {/** First section */}
-      <div className="pt-5 pb-10 md:pt-20 md:pb-20 w-full flex flex-col lg:flex-row h-max px-10 md:px-16">
+      <div className="pt-5 pb-10 md:pt-20 md:pb-20 w-full flex flex-col items-center lg:flex-row h-max px-10 md:px-16">
         <div className="flex flex-col md:flex-row items-start md:items-center my-10 gap-5 lg:w-1/2">
           <Avatar className="w-30 h-30">
-            <AvatarImage src={"/avatar-image.jpg"} alt="image" />
+            <AvatarImage src="/avatar-image.png" alt="image" />
             <AvatarFallback>WM</AvatarFallback>
           </Avatar>
           <div className="flex flex-col gap-1">
@@ -97,7 +98,7 @@ const AboutUs = () => {
         </div>
       </div>
       {/** Second section */}
-      <div className="py-10 md:pt-[5rem] md:py-[10rem] w-full flex flex-col md:flex-row items-center bg-white">
+      <div className="py-10 md:pt-[5rem] md:py-[10rem] w-full flex flex-col md:flex-row items-center justify-center gap-x-20 bg-white">
         <div className="w-full h-[500px] relative">
           <div
             className="w-[220px] h-[280px]
@@ -174,7 +175,7 @@ const AboutUs = () => {
         </div>
       </div>
       {/** Third section */}
-      <div className="p-10 md:px-20 md:py-20 w-full flex flex-col md:flex-row items-center ">
+      <div className="p-10 md:px-20 md:pt-20 w-full flex flex-col md:flex-row items-center ">
         <div className="mb-10 md:mb-0 lg:w-1/2">
           <p
             className="text-[30px]
@@ -232,6 +233,8 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+      {/** Footer */}
+      <Footer showRequest={true} />
     </div>
   );
 };
