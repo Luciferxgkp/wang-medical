@@ -9,11 +9,11 @@ export const pages = [
     title: "About Us",
     path: "/about-us",
   },
-  {
-    id: "3",
-    title: "Services",
-    path: "/services",
-  },
+  // {
+  //   id: "3",
+  //   title: "Services",
+  //   path: "/services",
+  // },
   {
     id: "5",
     title: "Contact",
