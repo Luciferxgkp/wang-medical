@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/contact-form";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { Mail, MapPin, Smartphone } from "lucide-react";
 import { Metadata } from "next";
@@ -61,6 +62,8 @@ const Contact = () => {
         </div>
         <ContactForm />
       </div>
+      {/** Footer */}
+      <Footer showRequest={false} />
     </div>
   );
 };
