@@ -68,7 +68,7 @@ const AboutUs = () => {
       <div className="pt-5 pb-10 md:pt-20 md:pb-20 w-full flex flex-col items-center lg:flex-row h-max px-10 md:px-16">
         <div className="flex flex-col md:flex-row items-start md:items-center my-10 gap-5 lg:w-1/2">
           <Avatar className="w-30 h-30">
-            <AvatarImage src="/avatar-image.png" alt="image" />
+            <AvatarImage src={"/avatar-image.png"} alt="image" />
             <AvatarFallback>WM</AvatarFallback>
           </Avatar>
           <div className="flex flex-col gap-1">
@@ -175,21 +175,13 @@ const AboutUs = () => {
         </div>
       </div>
       {/** Third section */}
-      <div className="p-10 md:px-20 md:pt-20 w-full flex flex-col md:flex-row items-center ">
-        <div className="mb-10 md:mb-0 lg:w-1/2">
+      <div className="p-10 md:px-20 md:pt-10 w-full flex flex-col items-center ">
+        <div className="mb-10 md:mb-0 ">
           <p
-            className="text-[30px]
-            sm:text-[48px]
-            md:text-[60px]
-            lg:text-[72px]
+            className="text-3xl
             text-primary
-            tracking-tighter
-            font-light
-            leading-[30px]
-            sm:leading-[48px]
-            md:leading-[60px]
-            lg:leading-[72px]
             mt-5
+            mb-10
             w-full
             md:max-w-2xl
           "
@@ -197,7 +189,7 @@ const AboutUs = () => {
             Why Choose Wang Medical?
           </p>
         </div>
-        <div className="lg:w-1/2 flex flex-col justify-center">
+        <div className=" flex flex-col justify-center">
           <p className="mb-4">
             Feng-Ling Wang has been practicing for almost 20 years. Feng-Ling
             W­ang has been practicing acupuncture since 1993. He was trained in
