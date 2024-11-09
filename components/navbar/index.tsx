@@ -32,6 +32,79 @@ import { Menu } from "lucide-react";
 import React from "react";
 
 export default function Navbar() {
+  const components: { title: string; href: string; description?: string }[] = [
+    {
+      title: "Allergies",
+      href: "/allergies",
+      description:
+        "Learn about managing and treating allergy symptoms effectively.",
+    },
+    {
+      title: "Anxiety",
+      href: "/anxiety",
+      description:
+        "Explore resources for managing anxiety and improving mental well-being.",
+    },
+    {
+      title: "Arthritis",
+      href: "/arthritis",
+      description:
+        "Discover treatments and tips to manage arthritis pain and stiffness.",
+    },
+    {
+      title: "Back Pain",
+      href: "/back-pain",
+      description:
+        "Find relief options and exercises for back pain management.",
+    },
+    {
+      title: "Chronic Pain",
+      href: "/chronic-pain",
+      description:
+        "Understand chronic pain and explore ways to manage it effectively.",
+    },
+    {
+      title: "Digestive Disorders",
+      href: "/digestive-disorders",
+      description:
+        "Learn about digestive disorders and treatments for better gut health.",
+    },
+    {
+      title: "Headaches",
+      href: "/headaches",
+      description: "Get insights into headache causes and remedies for relief.",
+    },
+    {
+      title: "Infertility",
+      href: "/infertility",
+      description: "Explore infertility treatments and support resources.",
+    },
+    {
+      title: "Insomnia",
+      href: "/insomnia",
+      description:
+        "Find techniques and tips to improve sleep and treat insomnia.",
+    },
+    {
+      title: "Neck Pain",
+      href: "/neck-pain",
+      description:
+        "Discover ways to alleviate and prevent neck pain discomfort.",
+    },
+    {
+      title: "Opioid Addiction",
+      href: "/opioid-addiction",
+      description:
+        "Access resources for overcoming opioid addiction and finding support.",
+    },
+    {
+      title: "Stress",
+      href: "/stress",
+      description:
+        "Learn methods for reducing stress and enhancing relaxation.",
+    },
+  ];
+
   return (
     <div className="flex items-center justify-between px-4 md:px-16 h-20">
       <div>
@@ -47,7 +120,7 @@ export default function Navbar() {
           <SheetTrigger>
             <Menu
               size={24}
-              className="text-[--theme-color-text_dark] flex md:hidden cursor-pointer"
+              className="text-[--theme-color-text_dark] flex md:hidden cursor-pointer "
             />
           </SheetTrigger>
           <SheetContent className="w-full">
@@ -84,6 +157,46 @@ export default function Navbar() {
                       <Link href="/faqs">FAQs</Link>
                     </CommandItem>
                   </CommandGroup>
+                  <CommandGroup heading="Services">
+                    <CommandItem asChild>
+                      <Link href="/allergies">Allergies</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/anxiety">Anxiety</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/arthritis">Arthritis</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/back-pain">Back Pain</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/chronic-pain">Chronic Pain</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/digestive-disorders">
+                        Digestive Disorders
+                      </Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/headaches">Headaches</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/infertility">Infertility</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/insomnia">Insomnia</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/neck-pain">Neck Pain</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/opioid-addiction">Opioid Addiction</Link>
+                    </CommandItem>
+                    <CommandItem asChild>
+                      <Link href="/stress">Stress</Link>
+                    </CommandItem>
+                  </CommandGroup>
                 </CommandList>
               </Command>
             </SheetHeader>
@@ -103,6 +216,22 @@ export default function Navbar() {
               </Link>
             </NavigationMenuItem>
           ))}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] ">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Research</NavigationMenuTrigger>
             <NavigationMenuContent>

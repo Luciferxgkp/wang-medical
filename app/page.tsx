@@ -1,32 +1,70 @@
+"use client";
+
+import Footer from "@/components/footer";
 import img3 from "@/public/hero-1.jpeg";
 import img1 from "@/public/iStock-147320515.jpg";
 import img2 from "@/public/image-2.jpg";
 import Image from "next/image";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 export default function Home() {
   return (
     <div className="w-full min-h-screen">
-      <Image
-        src={img1}
-        alt="hero"
-        width={1920}
-        height={1080}
-        className="object-cover h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[90vh] w-full"
-      />
+      {/* Slider Section */}
+      <Carousel
+        className="w-full p=0"
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
+      >
+        <CarouselContent className="w-full p-0">
+          <CarouselItem>
+            <Image
+              src={img1}
+              alt="hero"
+              width={1920}
+              height={1080}
+              className="object-cover h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[90vh] w-full"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              src={img2}
+              alt="hero"
+              width={1920}
+              height={1080}
+              className="object-cover h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[90vh] w-full"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              src={img3}
+              alt="hero"
+              width={1920}
+              height={1080}
+              className="object-cover h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[90vh] w-full"
+            />
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel>
+
       <div className="px-4 md:px-16 my-10 md:my-20 flex flex-col items-center justify-center text-center">
         <h2 className="text-[16px] font-thin text-primary uppercase">
           What we do
         </h2>
         <p
-          className="text-[30px]
-            sm:text-[48px]
-            md:text-[60px]
+          className="text-[35px]
             text-primary
             tracking-tighter
             font-light
-            leading-[30px]
-            sm:leading-[48px]
-            md:leading-[60px]
             mt-5
             max-w-6xl
           "
@@ -34,10 +72,6 @@ export default function Home() {
           Restore your health, vitality, and enduring equilibrium with
           comprehensive, holistic methodologies.
         </p>
-        <div className="mt-10">
-          <p className="text-xl text-primary">Wang Medical</p>
-          <p>Creative Director</p>
-        </div>
       </div>
       <div className="gap-4 mt-20 flex flex-col md:flex-row w-full pb-10 md:pb-20">
         <div
@@ -49,35 +83,25 @@ export default function Home() {
             src={img2}
             alt="hero"
             className="object-cover 
-          h-[30vh]
-          sm:h-[50vh]
-          md:h-[70vh]
-          lg:h-[90vh]
+          h-full
           w-full"
           />
         </div>
         <div
           className="
           w-full
-      p-4
-      px-10
-      
-      md:w-1/2
-      flex flex-col
-      justify-center
+          px-10
+          md:w-1/2
+          flex flex-col
+          justify-center
           "
         >
           <p
-            className="text-[30px]
-            sm:text-[48px]
-            md:text-[60px]
-            text-primary
-            tracking-tighter
+            className="text-3xl
+            p-0
+            m-0
             font-light
-            leading-[30px]
-            sm:leading-[48px]
-            md:leading-[60px]
-            mt-5
+            text-primary
             max-w-6xl
           "
           >
@@ -120,11 +144,11 @@ export default function Home() {
             <Link href="/about-us">About Us</Link>
           </Button> */}
       </div>
-      <div className="gap-4 md:mt-20 flex flex-col-reverse md:flex-row w-full ">
+      <div className="gap-4 md:mt-20 flex flex-col-reverse md:flex-row w-full pb-10">
         <div
           className="
           w-full
-      p-4
+      
       px-10
       
       md:w-1/2
@@ -133,25 +157,20 @@ export default function Home() {
           "
         >
           <p
-            className="text-[30px]
-            sm:text-[48px]
-            md:text-[60px]
-            text-primary
-            tracking-tighter
+            className="text-3xl
+            p-0
+            m-0
             font-light
-            leading-[30px]
-            sm:leading-[48px]
-            md:leading-[60px]
-            mt-5
+            text-primary
             max-w-6xl
           "
           >
             Our Approach to Your Healthcare
           </p>
-          <p
+          <h2
             className="text-[14px]
             sm:text-[16px]
-            mt-4
+mt-4
           "
           >
             Feng-Ling believes in preventative health care and focuses his
@@ -166,9 +185,9 @@ export default function Home() {
             treatments and used only when needed, not for health maintenance.
             Therefore, you will not be pressured to take home a variety of
             supplements or herbs during your visit.
-            <h2 className="text-[16px] text-primary uppercase mt-5 font-bold">
+            <p className="text-[16px] text-primary uppercase mt-5 font-bold">
               Wang Medical, Inc. offers an exclusive referral program.
-            </h2>
+            </p>
             If you are an existing patient at Wang Medical, Inc. you will
             receive a $20.00 certificate to use towards any service we offer for
             each new patient you refer to us. There is no limit as to how many
@@ -181,7 +200,7 @@ export default function Home() {
             name to us for verification at check-out. We greatly appreciate your
             confidence in us by recommending us to your family and friends.
             Thank you.
-          </p>
+          </h2>
         </div>
         <div
           className="
@@ -192,14 +211,12 @@ export default function Home() {
             src={img3}
             alt="hero"
             className="object-cover 
-          h-[30vh]
-          sm:h-[50vh]
-          md:h-[70vh]
-          lg:h-[90vh]
+          h-full
           w-full"
           />
         </div>
       </div>
+      <Footer showRequest={true} />
     </div>
   );
 }

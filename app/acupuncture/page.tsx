@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { Metadata } from "next";
 
@@ -114,6 +115,8 @@ const Acupuncture = () => {
           </div>
         </div>
       </div>
+      {/** Footer */}
+      <Footer showRequest={true} />
     </div>
   );
 };
