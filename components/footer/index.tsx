@@ -35,7 +35,9 @@ const Footer = ({ showRequest }: Props) => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div className="mx-auto text-center my-5">Footer Text and copyright</div>
+      <div className="mx-auto text-center my-5">
+        © 2024 Wang Medical. All rights reserved
+      </div>
     </div>
   );
 };
