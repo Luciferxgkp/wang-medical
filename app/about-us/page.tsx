@@ -72,7 +72,7 @@ const AboutUs = () => {
             <AvatarFallback>WM</AvatarFallback>
           </Avatar>
           <div className="flex flex-col gap-1">
-            <p className="text-4xl font-light text-primary">Feng-Ling Wang</p>
+            <p className="text-2xl font-light text-primary">Feng-Ling Wang</p>
             <p className="text-lg">CEO & Founder</p>
           </div>
         </div>
