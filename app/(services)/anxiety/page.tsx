@@ -43,7 +43,7 @@ const Anxiety = () => {
             treatments. They also cultured blood cells from the patients to
             measure the density of T-cells, a type of white blood cell related
             to immune function and healing, before and after treatments.
-            Patients’ anxiety scores were significantly lower after the
+            Patients&apos; anxiety scores were significantly lower after the
             acupuncture treatments, and the proliferation of T-cells increased
             after the treatments.
           </p>
@@ -103,7 +103,7 @@ const Anxiety = () => {
                 afflictions tend to take longer to resolve than acute injuries.
                 We will help determine the duration of time it will take for you
                 to see significant changes in your health. We can work together
-                to develop a treatment plan that’s manageable for you.
+                to develop a treatment plan that&apos;s manageable for you.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

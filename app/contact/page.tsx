@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/contact-form";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { Mail, MapPin, Smartphone } from "lucide-react";
+import { Building2, MapPin, Smartphone } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ const Contact = () => {
             mt-5
           "
           >
-            Have questions? Get in touch!
+            Ask us a question
           </p>
           <p
             className="text-[14px]
@@ -42,21 +42,20 @@ const Contact = () => {
             mt-4
           "
           >
-            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim.
+            Ask us a Question and we will reply within 1 business day.
           </p>
           <div className="flex flex-col gap-5 mt-5">
             <div className="flex items-center gap-4">
+              <Building2 size={24} />
+              <p>Wang Medical, Inc.</p>
+            </div>
+            <div className="flex items-center gap-4">
               <MapPin size={24} />
-              <p>785 15h Street, Office 478 Berlin</p>
+              <p>3602 N. Cole Rd. Boise, ID 83704</p>
             </div>
             <div className="flex items-center gap-4">
               <Smartphone size={24} />
-              <p>+1 840 841 25 69</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <Mail size={24} />
-              <p>abc@gmail.com</p>
+              <p>(208) 321-7348</p>
             </div>
           </div>
         </div>
