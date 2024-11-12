@@ -16,7 +16,7 @@ export const pages = [
   // },
   {
     id: "5",
-    title: "Contact",
+    title: "Contact Us",
     path: "/contact",
   },
 ];
