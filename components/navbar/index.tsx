@@ -205,7 +205,7 @@ export default function Navbar() {
       </div>
       <NavigationMenu className="justify-end hidden md:flex">
         <NavigationMenuList className="gap-0">
-          {pages.map((page) => (
+          {/* {pages.map((page) => (
             <NavigationMenuItem key={page.id}>
               <Link href={page.path} legacyBehavior passHref>
                 <NavigationMenuLink
@@ -215,7 +215,21 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-          ))}
+          ))} */}
+          {pages
+            .filter((page) => page.id !== "5")
+            .map((page) => (
+              <NavigationMenuItem key={page.id}>
+                <Link href={page.path} legacyBehavior passHref>
+                  <NavigationMenuLink
+                    className={cn(navigationMenuTriggerStyle(), "bg-inherit")}
+                  >
+                    {page.title}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            ))}
+
           <NavigationMenuItem>
             <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -269,6 +283,19 @@ export default function Navbar() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+          {pages
+            .filter((page) => page.id === "5")
+            .map((page) => (
+              <NavigationMenuItem key={page.id}>
+                <Link href={page.path} legacyBehavior passHref>
+                  <NavigationMenuLink
+                    className={cn(navigationMenuTriggerStyle(), "bg-inherit")}
+                  >
+                    {page.title}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            ))}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
