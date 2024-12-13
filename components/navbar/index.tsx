@@ -217,7 +217,7 @@ export default function Navbar() {
             </NavigationMenuItem>
           ))} */}
           {pages
-            .filter((page) => page.id !== "5")
+            .filter((page) => ( page.id !== '4' &&page.id !== "5"))
             .map((page) => (
               <NavigationMenuItem key={page.id}>
                 <Link href={page.path} legacyBehavior passHref>
@@ -284,7 +284,7 @@ export default function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           {pages
-            .filter((page) => page.id === "5")
+            .filter((page) => (page.id === "5" || page.id === "4"))
             .map((page) => (
               <NavigationMenuItem key={page.id}>
                 <Link href={page.path} legacyBehavior passHref>

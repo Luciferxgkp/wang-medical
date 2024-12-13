@@ -216,6 +216,57 @@ mt-4
           />
         </div>
       </div>
+      {/** why choose section */}
+      <div className="p-10 md:px-20 md:pt-10 w-full flex flex-col items-center ">
+        <div className="mb-10 md:mb-0 ">
+          <p
+            className="text-3xl
+            text-primary
+            mt-5
+            mb-10
+            w-full
+            md:max-w-2xl
+          "
+          >
+            Why Choose Wang Medical?
+          </p>
+        </div>
+        <div className=" flex flex-col justify-center">
+          <p className="mb-4">
+            Feng-Ling Wang has been practicing for almost 20 years. Feng-Ling
+            W­ang has been practicing acupuncture since 1993. He was trained in
+            China at Beijing University of Chinese Medicine and completed his
+            residency at the World Health Organization affiliated Guan an Men
+            hospital. He is NCCAOM certified and licensed acupuncturist in
+            Idaho.
+          </p>
+          <p className="mb-4">
+            Wang Medical, Inc. won the Integrity Counts in Business Award from
+            the Better Business Bureau. At Wang Medical, Inc. you are in charge
+            of your care. We work with you to make sure you receive the best
+            treatment you can for your unique needs.
+          </p>
+          <p className="mb-4">
+            Feng-Ling is the author of several self-care books and videos and is
+            an approved national instructor for acupuncturists.
+          </p>
+          <p className="mb-4">
+            Wang Medical, Inc. provides comprehensive patient care in the most
+            modern and comforting clinic setting available. Our clinic is
+            modern, handicap accessible and clean. All of the treatment rooms
+            are private. Only disposable needles are used.
+          </p>
+          <p className="mb-4">
+            You will not be asked to fully undress for your treatment. Only the
+            area being worked on will be exposed and you will be provided
+            draping sheets when necessary.
+          </p>
+          <p className="mb-4">
+            Idaho&apos;s First Modern Chinese Medical Practitioner. Wang
+            Medical, Inc. has been serving the Treasure Valley since 1998.
+          </p>
+        </div>
+      </div>
       <Footer showRequest={true} />
     </div>
   );
