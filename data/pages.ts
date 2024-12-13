@@ -9,11 +9,16 @@ export const pages = [
     title: "About Us",
     path: "/about-us",
   },
-  // {
-  //   id: "3",
-  //   title: "Services",
-  //   path: "/services",
-  // },
+  {
+    id: "3",
+    title: "What we treat?",
+    path: "/what-we-treat",
+  },
+  {
+    id: "4",
+    title: "Fees & Insurance",
+    path: "/fees-and-insurance",
+  },
   {
     id: "5",
     title: "Contact Us",
