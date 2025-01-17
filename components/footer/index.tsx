@@ -10,7 +10,7 @@ const Footer = ({ showRequest }: Props) => {
     <div className="relative w-full h-[400px] text-right mb-10">
       {showRequest && (
         <div className="flex flex-col items-center gap-2 my-5">
-          <Button className="mt-5 text-lg w-[200px] hover:scale-105" asChild>
+          <Button className="mt-5 text-lg max-w-fit hover:scale-105" asChild>
             <Link href="/contact">Request Appointment</Link>
           </Button>
           <div className="text-center text-lg">
