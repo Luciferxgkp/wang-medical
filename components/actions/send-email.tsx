@@ -1,7 +1,13 @@
 "use server";
 import nodemailer from "nodemailer";
 
-export const sendEmail = async (values: any) => {
+export const sendEmail = async (values: {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}) => {
   const transporter = nodemailer.createTransport({
     host: "mail5.enguard.com",
     port: 587,
