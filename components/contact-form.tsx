@@ -13,8 +13,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Textarea } from "./ui/textarea";
+import { sendEmail } from "./actions/send-email";
 
-const formSchema = z.object({
+export const formSchema = z.object({
   name: z.string(),
   email: z.string().email(),
   phone: z.string(),
@@ -28,7 +29,7 @@ export function ContactForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    sendEmail(values);
   }
   return (
     <Form {...form}>
