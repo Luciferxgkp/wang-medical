@@ -32,11 +32,14 @@ export const sendEmail = async (values: {
 
   console.log(mailOptions);
 
-  transporter.sendMail(mailOptions, (error: any, info: any) => {
-    if (error) {
-      console.error("Error sending email: ", error);
-    } else {
-      console.log("Email sent: ", info.response);
+  transporter.sendMail(
+    mailOptions,
+    (error: Error | null, info: { response: string }) => {
+      if (error) {
+        console.error("Error sending email: ", error);
+      } else {
+        console.log("Email sent: ", info.response);
+      }
     }
-  });
+  );
 };
