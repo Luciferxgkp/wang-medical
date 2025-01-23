@@ -14,22 +14,49 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Textarea } from "./ui/textarea";
 import { sendEmail } from "./actions/send-email";
+import { toast } from "sonner";
+import { useState } from "react";
 
 export const formSchema = z.object({
-  name: z.string(),
+  name: z.string().min(1, {
+    message: "Please enter name",
+  }),
   email: z.string().email(),
-  phone: z.string(),
-  subject: z.string(),
-  message: z.string(),
+  phone: z
+    .string()
+    .regex(
+      new RegExp(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/),
+      "Please enter a valid number"
+    ),
+  subject: z.string().min(1, {
+    message: "Please enter subject",
+  }),
+  message: z.string().min(1, {
+    message: "Please enter message",
+  }),
 });
 
 export function ContactForm() {
+  const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    sendEmail(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true);
+    toast.promise(sendEmail(values), {
+      loading: "Loading...",
+      success: () => {
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+        return `Email Sent Successfully`;
+      },
+      error: "An Error Occured during sending the email",
+      finally: () => {
+        setLoading(false);
+      },
+    });
   }
   return (
     <Form {...form}>
@@ -105,7 +132,7 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="mt-10">
+          <Button type="submit" className="mt-10" disabled={loading}>
             Submit
           </Button>
         </div>

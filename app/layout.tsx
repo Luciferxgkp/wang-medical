@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Spectral } from "next/font/google";
 import Navbar from "@/components/navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 const spectral = Spectral({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${spectral.className} antialiased`}>
         <Navbar />
         {children}
+        <Toaster />
       </body>
     </html>
   );
